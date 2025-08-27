@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gyeongju Photos</title>
+    <link rel="stylesheet" href="photo-gallery.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Back to Map</a>
+        
+        <div class="header">
+            <h1>Gyeongju Photos</h1>
+            <p>Pictures of Gyeongju in 2025 Aug.</p>
+            <p>photo shot by Canon G7 MarkII</p>
+        </div>
+        
+        <div class="photo-grid">
+            <!-- Photo 1 -->
+            <div class="photo-item">
+                <img src="gyeongju1.jpg" 
+                     alt="Gyeongju" 
+                     onclick="openLightbox('gyeongju1.jpg', 'Gyeongju', 'Visiting the old Silla tomb with my friend.')"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                    Your Photo Here
+                </div>
+                <div class="photo-info">
+                    <h3>Morning Coffee</h3>
+                    <p>Perfect start to a coding day with my favorite latte</p>
+                </div>
+            </div>
+            
+            <!-- Photo 2 -->
+            <div class="photo-item">
+                <img src="cafe2.jpg" 
+                     alt="Cozy Corner" 
+                     onclick="openLightbox('cafe2.jpg', 'Cozy Corner', 'My usual spot with good wifi and natural light')"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                    Your Photo Here
+                </div>
+                <div class="photo-info">
+                    <h3>Cozy Corner</h3>
+                    <p>My usual spot with good wifi and natural light</p>
+                </div>
+            </div>
+            
+            <!-- Photo 3 -->
+            <div class="photo-item">
+                <img src="cafe3.jpg" 
+                     alt="Coding Setup" 
+                     onclick="openLightbox('cafe3.jpg', 'Coding Setup', 'Laptop, coffee, and creativity in action')"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                    Your Photo Here
+                </div>
+                <div class="photo-info">
+                    <h3>Coding Setup</h3>
+                    <p>Laptop, coffee, and creativity in action</p>
+                </div>
+            </div>
+            
+            <!-- Photo 4 -->
+            <div class="photo-item">
+                <img src="cafe4.jpg" 
+                     alt="Evening Study" 
+                     onclick="openLightbox('cafe4.jpg', 'Evening Study', 'Late night coding sessions with good company')"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                <div class="placeholder-img" style="display: none;">
+                    Your Photo Here
+                </div>
+                <div class="photo-info">
+                    <h3>Evening Study</h3>
+                    <p>Late night coding sessions with good company</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <div class="lightbox-content" onclick="event.stopPropagation()">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-description"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="lightbox.js"></script>
+</body>
+</html>
