@@ -32,7 +32,7 @@ const locations = [
         coords: [129.211685, 35.842758],
         title: "Gyeongju, S. Korea",
         description: "it was the capital of the Silla Dynasty",
-        photoPage: "cafe-photos.html"
+        photoPage: "gyeongju-photos.html"
     },
     {
         coords: [128.5884, 38.2042],
